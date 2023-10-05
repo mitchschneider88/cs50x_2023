@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                document.querySelector('#charli').addEventListener('click', function() {
+                        document.querySelector('#charli').style.backgroundColor = 'lightGreen';
+                        document.querySelector('#ed').style.backgroundColor = '#d9edff';
+                        document.querySelector('#rita').style.backgroundColor = '#d9edff';
+                        document.querySelector('#feedback').innerHTML = 'Correct!';
+                    });
+
+                document.querySelector('#ed').addEventListener('click', function() {
+                        document.querySelector('#charli').style.backgroundColor = '#d9edff';
+                        document.querySelector('#ed').style.backgroundColor = 'red';
+                        document.querySelector('#rita').style.backgroundColor = '#d9edff';
+                        document.querySelector('#feedback').innerHTML = 'Incorrect!';
+                    });
+
+                document.querySelector('#rita').addEventListener('click', function() {
+                        document.querySelector('#charli').style.backgroundColor = '#d9edff';
+                        document.querySelector('#ed').style.backgroundColor = 'd9edff';
+                        document.querySelector('#rita').style.backgroundColor = 'red';
+                        document.querySelector('#feedback').innerHTML = 'Incorrect!';
+                    });
+
+                document.querySelector('#confirm').addEventListener('click', function() {
+                    let input = document.querySelector('#input')
+                    if (input.value === '2022') {
+                        input.style.backgroundColor = 'lightGreen';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+
+                    else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What British artist sang the song "Boom Clap?"</h3>
+                    <p id="feedback"></p>
+                    <button id="rita">Rita Ora</button>
+                    <button id="ed">Ed Sheeran</button>
+                    <button id="charli">Charli XCX</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What year did Charli XCX's album 'Crash' come out?</h3>
+                <p id="feedback2"></p>
+                <input type="text" id="input">
+                <button id="confirm">Check Your Answer</button>
+            </div>
+        </div>
+    </body>
+</html>

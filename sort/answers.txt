@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort.
+
+How do you know?: It performs faster than selection sort on the sorted .txt files, while performing slower than merge sort on everything.
+
+sort2 uses: Merge sort.
+
+How do you know?: It is the fastest sorting algorithm across all .txt files.
+
+sort3 uses: Selection sort.
+
+How do you know?: It is the slowest sorting alorithm across all .txt files - its O and Ω are the same.
